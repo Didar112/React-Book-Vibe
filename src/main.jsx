@@ -5,6 +5,7 @@ import './index.css'
 
 import { router } from './routes/Routes';
 import BookProvider from './Context/BookContext';
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')).render(
 
     <BookProvider>
      <RouterProvider router={router} />
+     <ToastContainer />
     </BookProvider>
   </StrictMode>,
 )

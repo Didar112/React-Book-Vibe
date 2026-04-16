@@ -1,6 +1,7 @@
 
 import React, { createContext } from 'react';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 
 export const BookContext = createContext();
@@ -16,11 +17,11 @@ const BookProvider = ({children}) => {
         const isBookHere = readList.find(item=>item.bookId==bookObj.bookId)
 
         if(isBookHere){
-            alert("The book already exists in read list")
+            toast.warning("This book already exists in readlist")
         }
         else {
             setReadList([...readList, bookObj])
-            alert(`${bookObj.bookName} is added to the list`)
+           toast.success(`${bookObj.bookName} is added to the list`)
         }
     }
    
