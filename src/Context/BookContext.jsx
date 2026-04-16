@@ -20,14 +20,20 @@ const BookProvider = ({children}) => {
         }
         else {
             setReadList([...readList, bookObj])
+            alert(`${bookObj.bookName} is added to the list`)
         }
     }
    
 
+    const data = {
+        readList,
+        setReadList,
+        handleReadCl,
+
+    }
 
 
-
-    return <BookContext.Provider value={readList, setReadList, handleReadCl}> {children} </BookContext.Provider>
+    return <BookContext.Provider value={data}> {children} </BookContext.Provider>
     
 };
 

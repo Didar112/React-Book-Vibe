@@ -22,9 +22,8 @@ const BookDetail = () => {
     
     //adding clicked data to read list 
     const bookContext = useContext(BookContext)
-    const {readList, setReadList, handleReadCl} = bookContext
+       const {readList, setReadList, handleReadCl} = bookContext
 
-    console.log(bookContext)
 
 
 
