@@ -22,7 +22,7 @@ const BookDetail = () => {
     
     //adding clicked data to read list 
     const bookContext = useContext(BookContext)
-       const {readList, setReadList, handleReadCl} = bookContext
+       const {readList, setReadList, handleReadCl, handleWishCl, setWishList, whishList} = bookContext
 
 
 
@@ -66,7 +66,7 @@ const BookDetail = () => {
                         </div>
                         <div className='flex gap-5 mt-3 '>
                             <button  className="btn" onClick={()=>handleReadCl(clickedBook)} >Mark as Read</button>
-                            <button className="btn btn-primary">Add to Wishlist</button>
+                            <button onClick={()=>handleWishCl(clickedBook)} className="btn btn-primary">Add to Wishlist</button>
 
                         </div>
                     </div>
